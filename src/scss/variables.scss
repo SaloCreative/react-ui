@@ -1,0 +1,86 @@
+@import url('http://fonts.googleapis.com/css?family=Ruda:400,700,900');
+
+// ================= //
+// == C O L O R S == //
+// ================= //
+
+// Global colors
+$white: #fff;
+$black: #000;
+
+// Brand colors
+$primary: #2d323f;
+$secondary: #424a5d;
+$tertiary: #5264AE;
+$blue: #00B5D2;
+$amber: #cce82e;
+$green: #23cf70;
+$red: #ed5565;
+$lightest-grey: #f2f2f2;
+$light-grey: #ebebeb;
+$grey: #d1d3d4;
+$dark-grey: #757575;
+
+// =============================== //
+// == F O N T   S E T T I N G S == //
+// =============================== //
+$font-size-base: 10;
+$font-size-modifier: 1.7px;
+
+$base-font-size: $font-size-base;
+$base-font-family: 'Ruda', 'Helvetica Neue', Helvetica, sans-serif;
+$base-font-size: 1.7;
+$base-line-height: (29/17);
+
+$heading-font-family: 'Ruda', 'Helvetica Neue', Helvetica, sans-serif;
+$heading-font-weight: 600;
+
+$body-font-family: 'Ruda', 'Helvetica Neue', Helvetica, sans-serif;
+$body-font-weight: 400;
+
+$fixed-font-family: monospace;
+$fixed-font-weight: 400;
+
+$heading-text-colour: $dark-grey;
+$body-text-colour: $dark-grey;
+$subtle-text-colour: $grey;
+
+
+// =================== //
+// == B U T T O N S == //
+// =================== //
+
+// Button variables
+// ================
+$btn-border: none;
+$btn-border-radius: 0;
+
+$btn-font-size: 1.1;
+$btn-line-height: (16/11);
+$btn-font-weight: normal !default;
+
+$btn-padding-x: 1.6 !default;
+$btn-padding-y: 1.6 !default;
+
+$btn-margin-x: 0;
+$btn-margin-y: 0;
+
+$btn-default-colour: #000;
+
+// ============= //
+// == G R I D == //
+// ============= //
+$page-width: 1425; // 1425px + 25px
+$max-column-count: 12;
+$vspace: 10px;
+$hspace: 10px;
+$row-top: 40px;
+$row-bottom: 0;
+
+$lg: 1000;
+$md: 860;
+$tablet: 767;
+$sm: 620;
+$phone: 480;
+
+$helper-breakpoints: (sm: $sm, tablet: $tablet, md: $md, lg: $lg);
