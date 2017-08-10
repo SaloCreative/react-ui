@@ -18,6 +18,16 @@
 @import './utilities/mixins/um--box-shadows';
 @import './utilities/mixins/um--transitions';
 
+// --------
+// elements
+// Pure HTML elements
+// --------
+@import 'elements/e--typography';
+@import 'elements/e--buttons';
+@import 'elements/e--lists';
+@import 'elements/e--tables';
+@import 'elements/e--blockquotes';
+@import 'elements/e--code_snippets';
 
 // --------
 // components

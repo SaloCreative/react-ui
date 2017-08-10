@@ -1,0 +1,49 @@
+// --------------- // Tables Styles // --------------- //
+
+// Variables
+$table_header_colour: $black;
+$table_border_colour: $light-grey;
+
+// Generic tables styles for all devices
+%table,
+.table,
+table {
+    margin: 0 0 2.5rem;
+    width: 100% !important;
+    max-width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: none;
+    border-left: 1px solid $table_border_colour;
+    border-bottom: 1px solid $table_border_colour;
+
+    td,
+    th {
+        padding: 2rem;
+        border-right: 1px solid $table_border_colour;
+        border-top: 1px solid $table_border_colour;
+        background: #ffffff;
+    }
+
+    th {
+        // reseting table heading styles
+        font-weight: normal;
+        text-align: left;
+
+        // Custom table heading style
+        background: $table_header_colour;
+    }
+
+}
+
+caption {
+    padding: 2.5rem 0 0.5rem;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.responsive_table {
+    overflow: scroll;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}

@@ -1,0 +1,42 @@
+// --------------- // Lists Styles // --------------- //
+
+// Generic lists styles for all devices
+
+ol,
+ul {
+    margin: 0 0 2rem;
+    padding-left: 2rem;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+ol ol,
+ol ul,
+ul ol,
+ul ul {
+    margin-bottom: 0;
+}
+
+// Description lists
+// =================
+dl {
+    margin-bottom: 1.2rem;
+    margin-top: 0;
+    width: 100%;
+
+    > dt,
+    > dd {
+        line-height: (23/16);
+    }
+
+    > dt {
+        font-weight: bold;
+    }
+
+    > dd {
+        margin-bottom: 1rem;
+        margin-left: 0;
+    }
+}
