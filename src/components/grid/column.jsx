@@ -2,22 +2,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class Card extends Component {
+export class Column extends Component {
   render() {
     const { children, customClasses } = this.props;
     return (
-      <div className={ `card ${ customClasses }` }>
+      <div className={ `column ${ customClasses }` }>
         { children }
       </div>
     );
   }
 }
 
-Card.defaultProps = {
+Column.defaultProps = {
   children: '',
   customClasses: ''
 };
 
-Card.propTypes = {
+Column.propTypes = {
   customClasses: PropTypes.string
 };

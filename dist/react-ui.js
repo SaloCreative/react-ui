@@ -62,10 +62,20 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	var _componentsGridCard = __webpack_require__(1);
+	var _componentsGridRow = __webpack_require__(1);
+
+	var _componentsGridRow2 = _interopRequireDefault(_componentsGridRow);
+
+	var _componentsGridColumn = __webpack_require__(12);
+
+	var _componentsGridColumn2 = _interopRequireDefault(_componentsGridColumn);
+
+	var _componentsGridCard = __webpack_require__(13);
 
 	var _componentsGridCard2 = _interopRequireDefault(_componentsGridCard);
 
+	exports.Row = _componentsGridRow2['default'];
+	exports.Column = _componentsGridColumn2['default'];
 	exports.Card = _componentsGridCard2['default'];
 
 /***/ },
@@ -95,44 +105,43 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
-	var Card = (function (_Component) {
-	  _inherits(Card, _Component);
+	var Row = (function (_Component) {
+	  _inherits(Row, _Component);
 
-	  function Card() {
-	    _classCallCheck(this, Card);
+	  function Row() {
+	    _classCallCheck(this, Row);
 
-	    _get(Object.getPrototypeOf(Card.prototype), 'constructor', this).apply(this, arguments);
+	    _get(Object.getPrototypeOf(Row.prototype), 'constructor', this).apply(this, arguments);
 	  }
 
-	  _createClass(Card, [{
+	  _createClass(Row, [{
 	    key: 'render',
 	    value: function render() {
 	      var _props = this.props;
-	      var classes = _props.classes;
+	      var children = _props.children;
 	      var customClasses = _props.customClasses;
 
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: 'card ' + customClasses + ' ' + classes.card },
-	        this.props.children
+	        { className: 'row ' + customClasses },
+	        children
 	      );
 	    }
 	  }]);
 
-	  return Card;
+	  return Row;
 	})(_react.Component);
 
-	Card.defaultProps = {
+	exports.Row = Row;
+
+	Row.defaultProps = {
 	  children: '',
 	  customClasses: ''
 	};
 
-	Card.propTypes = {
+	Row.propTypes = {
 	  customClasses: _propTypes2['default'].string
 	};
-
-	exports['default'] = Card;
-	module.exports = exports['default'];
 
 /***/ },
 /* 2 */
@@ -1212,6 +1221,137 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return ReactPropTypes;
 	};
 
+
+/***/ },
+/* 12 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var Column = (function (_Component) {
+	  _inherits(Column, _Component);
+
+	  function Column() {
+	    _classCallCheck(this, Column);
+
+	    _get(Object.getPrototypeOf(Column.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Column, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props;
+	      var children = _props.children;
+	      var customClasses = _props.customClasses;
+
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'column ' + customClasses },
+	        children
+	      );
+	    }
+	  }]);
+
+	  return Column;
+	})(_react.Component);
+
+	exports.Column = Column;
+
+	Column.defaultProps = {
+	  children: '',
+	  customClasses: ''
+	};
+
+	Column.propTypes = {
+	  customClasses: _propTypes2['default'].string
+	};
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var Card = (function (_Component) {
+	  _inherits(Card, _Component);
+
+	  function Card() {
+	    _classCallCheck(this, Card);
+
+	    _get(Object.getPrototypeOf(Card.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Card, [{
+	    key: 'render',
+	    value: function render() {
+	      var _props = this.props;
+	      var children = _props.children;
+	      var customClasses = _props.customClasses;
+
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'card ' + customClasses },
+	        children
+	      );
+	    }
+	  }]);
+
+	  return Card;
+	})(_react.Component);
+
+	exports['default'] = Card;
+
+	Card.defaultProps = {
+	  children: '',
+	  customClasses: ''
+	};
+
+	Card.propTypes = {
+	  customClasses: _propTypes2['default'].string
+	};
+	module.exports = exports['default'];
 
 /***/ }
 /******/ ])

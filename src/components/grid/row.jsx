@@ -2,22 +2,22 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export default class Card extends Component {
+export class Row extends Component {
   render() {
     const { children, customClasses } = this.props;
     return (
-      <div className={ `card ${ customClasses }` }>
+      <div className={ `row ${ customClasses }` }>
         { children }
       </div>
     );
   }
 }
 
-Card.defaultProps = {
+Row.defaultProps = {
   children: '',
   customClasses: ''
 };
 
-Card.propTypes = {
+Row.propTypes = {
   customClasses: PropTypes.string
 };

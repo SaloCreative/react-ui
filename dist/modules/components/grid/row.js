@@ -15,38 +15,37 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var Card = (function (_Component) {
-  _inherits(Card, _Component);
+var Row = (function (_Component) {
+  _inherits(Row, _Component);
 
-  function Card() {
-    _classCallCheck(this, Card);
+  function Row() {
+    _classCallCheck(this, Row);
 
     _Component.apply(this, arguments);
   }
 
-  Card.prototype.render = function render() {
+  Row.prototype.render = function render() {
     var _props = this.props;
     var children = _props.children;
     var customClasses = _props.customClasses;
 
     return _react2['default'].createElement(
       'div',
-      { className: 'card ' + customClasses },
+      { className: 'row ' + customClasses },
       children
     );
   };
 
-  return Card;
+  return Row;
 })(_react.Component);
 
-exports['default'] = Card;
+exports.Row = Row;
 
-Card.defaultProps = {
+Row.defaultProps = {
   children: '',
   customClasses: ''
 };
 
-Card.propTypes = {
+Row.propTypes = {
   customClasses: _propTypes2['default'].string
 };
-module.exports = exports['default'];
