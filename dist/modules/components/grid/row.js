@@ -39,7 +39,7 @@ var Row = (function (_Component) {
   return Row;
 })(_react.Component);
 
-exports.Row = Row;
+exports['default'] = Row;
 
 Row.defaultProps = {
   children: '',
@@ -49,3 +49,4 @@ Row.defaultProps = {
 Row.propTypes = {
   customClasses: _propTypes2['default'].string
 };
+module.exports = exports['default'];

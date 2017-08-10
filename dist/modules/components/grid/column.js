@@ -39,7 +39,7 @@ var Column = (function (_Component) {
   return Column;
 })(_react.Component);
 
-exports.Column = Column;
+exports['default'] = Column;
 
 Column.defaultProps = {
   children: '',
@@ -49,3 +49,4 @@ Column.defaultProps = {
 Column.propTypes = {
   customClasses: _propTypes2['default'].string
 };
+module.exports = exports['default'];

@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class Row extends Component {
+export default class Row extends Component {
   render() {
     const { children, customClasses } = this.props;
     return (

@@ -132,7 +132,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return Row;
 	})(_react.Component);
 
-	exports.Row = Row;
+	exports['default'] = Row;
 
 	Row.defaultProps = {
 	  children: '',
@@ -142,6 +142,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Row.propTypes = {
 	  customClasses: _propTypes2['default'].string
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 2 */
@@ -1276,7 +1277,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  return Column;
 	})(_react.Component);
 
-	exports.Column = Column;
+	exports['default'] = Column;
 
 	Column.defaultProps = {
 	  children: '',
@@ -1286,6 +1287,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	Column.propTypes = {
 	  customClasses: _propTypes2['default'].string
 	};
+	module.exports = exports['default'];
 
 /***/ },
 /* 13 */

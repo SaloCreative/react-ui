@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-export class Column extends Component {
+export default class Column extends Component {
   render() {
     const { children, customClasses } = this.props;
     return (
