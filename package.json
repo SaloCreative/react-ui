@@ -1,6 +1,6 @@
 {
   "name": "@salocreative/react-ui",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Simple set of React UI components.",
   "main": "./dist/modules/index.js",
   "scripts": {
@@ -19,7 +19,9 @@
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.5.10",
-    "react": "^0.14.2"
+    "react": "^0.14.2",
+    "react-fontawesome": "^1.6.1",
+    "react-router": "3"
   },
   "devDependencies": {
     "babel": "5.8.29",
