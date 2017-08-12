@@ -17,7 +17,7 @@ Include the main SCSS sheet in your applications stylesheet
 
 The styles use a variables sheet to set colours, default fonts, paddings etc. This is currently comented out in the package so you will need to copy `@salocreative/react-ui/src/scss/variables.scss` into your project directly and modify the values as you need.
 
-##Basic Grid
+## Basic Grid
 
 Include the elements needed at the top of the component it's required in.
 
@@ -37,7 +37,7 @@ Implement as follows
 
 Each of the grid components accepts a `customClasses` prop to add your own classes to each element. This is used like this `<Column customClasses='my-custom-card-class'></Column>`
 
-##Action button
+## Action button
 
 A basic material design rounded action button
 
@@ -72,7 +72,7 @@ There are also a couple of baked in modifier classes for the action button in th
 - `fixed` : this will fix the button in the bottom left corner of the screen and increase the diameter to 56px
 - `no-back` : removes the background colour of the button
 
-##Fixed menu
+## Fixed menu
 
 ```
 import { FixedMenu } from '@salocreative/react-ui';
