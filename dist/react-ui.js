@@ -101,10 +101,15 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _componentsButtonsActionButton2 = _interopRequireDefault(_componentsButtonsActionButton);
 
+	var _componentsMenusFixedMenu = __webpack_require__(80);
+
+	var _componentsMenusFixedMenu2 = _interopRequireDefault(_componentsMenusFixedMenu);
+
 	exports.Row = _componentsGridRow2['default'];
 	exports.Column = _componentsGridColumn2['default'];
 	exports.Card = _componentsGridCard2['default'];
 	exports.ActionButton = _componentsButtonsActionButton2['default'];
+	exports.FixedMenu = _componentsMenusFixedMenu2['default'];
 
 /***/ },
 /* 1 */
@@ -1030,7 +1035,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 8 */
-[80, 6],
+[81, 6],
 /* 9 */
 /***/ function(module, exports) {
 
@@ -3206,7 +3211,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 25 */
 7,
 /* 26 */
-[80, 27],
+[81, 27],
 /* 27 */
 6,
 /* 28 */
@@ -7654,6 +7659,134 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 80 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
+	var _reactFontawesome = __webpack_require__(78);
+
+	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+	var _gridCard = __webpack_require__(13);
+
+	var _gridCard2 = _interopRequireDefault(_gridCard);
+
+	var _buttonsActionButton = __webpack_require__(14);
+
+	var _buttonsActionButton2 = _interopRequireDefault(_buttonsActionButton);
+
+	var FixedMenu = (function (_Component) {
+	  _inherits(FixedMenu, _Component);
+
+	  function FixedMenu() {
+	    _classCallCheck(this, FixedMenu);
+
+	    _get(Object.getPrototypeOf(FixedMenu.prototype), 'constructor', this).call(this);
+	    this.state = {
+	      open: false
+	    };
+	  }
+
+	  _createClass(FixedMenu, [{
+	    key: 'close',
+	    value: function close(e) {
+	      e.preventDefault();
+	      this.setState({ open: false });
+	    }
+	  }, {
+	    key: 'open',
+	    value: function open(e) {
+	      e.preventDefault();
+	      this.setState({ open: true });
+	    }
+	  }, {
+	    key: 'renderMenu',
+	    value: function renderMenu() {
+	      var _this = this;
+
+	      if (!this.state.open) {
+	        return false;
+	      }
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'fixed-action__inner-wrapper' },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'fixed-action__menu' },
+	          _react2['default'].createElement(
+	            _gridCard2['default'],
+	            null,
+	            this.props.children
+	          )
+	        ),
+	        _react2['default'].createElement('div', { className: 'fixed-action__backdrop', onClick: function (e) {
+	            return _this.close(e);
+	          } })
+	      );
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this2 = this;
+
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'fixed-action__wrapper' },
+	        this.renderMenu(),
+	        _react2['default'].createElement(_buttonsActionButton2['default'], {
+	          type: 'button',
+	          customClasses: 'fixed',
+	          icon: this.props.icon,
+	          buttonPressed: function (e) {
+	            return _this2.open(e);
+	          }
+	        })
+	      );
+	    }
+	  }]);
+
+	  return FixedMenu;
+	})(_react.Component);
+
+	exports['default'] = FixedMenu;
+
+	FixedMenu.propTypes = {
+	  children: _propTypes2['default'].any,
+	  classes: _propTypes2['default'].string,
+	  icon: _propTypes2['default'].string
+	};
+
+	FixedMenu.defaultProps = {
+	  children: '',
+	  classes: '',
+	  icon: 'plus'
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 81 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**
