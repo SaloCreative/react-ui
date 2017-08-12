@@ -101,7 +101,11 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _componentsButtonsActionButton2 = _interopRequireDefault(_componentsButtonsActionButton);
 
-	var _componentsMenusFixedMenu = __webpack_require__(80);
+	var _componentsButtonsSwitch = __webpack_require__(80);
+
+	var _componentsButtonsSwitch2 = _interopRequireDefault(_componentsButtonsSwitch);
+
+	var _componentsMenusFixedMenu = __webpack_require__(81);
 
 	var _componentsMenusFixedMenu2 = _interopRequireDefault(_componentsMenusFixedMenu);
 
@@ -109,6 +113,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	exports.Column = _componentsGridColumn2['default'];
 	exports.Card = _componentsGridCard2['default'];
 	exports.ActionButton = _componentsButtonsActionButton2['default'];
+	exports.Switch = _componentsButtonsSwitch2['default'];
 	exports.FixedMenu = _componentsMenusFixedMenu2['default'];
 
 /***/ },
@@ -1035,7 +1040,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 8 */
-[81, 6],
+[82, 6],
 /* 9 */
 /***/ function(module, exports) {
 
@@ -3211,7 +3216,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 25 */
 7,
 /* 26 */
-[81, 27],
+[82, 27],
 /* 27 */
 6,
 /* 28 */
@@ -7685,6 +7690,91 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
+	var Switch = (function (_Component) {
+	  _inherits(Switch, _Component);
+
+	  function Switch() {
+	    _classCallCheck(this, Switch);
+
+	    _get(Object.getPrototypeOf(Switch.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Switch, [{
+	    key: 'renderLabel',
+	    value: function renderLabel() {
+	      if (!this.props.state && this.props.labelOff) {
+	        return this.props.labelOff;
+	      }
+	      return this.props.label;
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this = this;
+
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'switch__wrapper ' + (this.props.state ? 'active' : '') },
+	        _react2['default'].createElement(
+	          'div',
+	          { className: 'switch__container', onClick: function () {
+	              _this.props['switch'](!_this.props.state);
+	            } },
+	          _react2['default'].createElement('span', { className: 'switch__handle' })
+	        ),
+	        _react2['default'].createElement(
+	          'span',
+	          { className: 'switch__label' },
+	          this.renderLabel()
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Switch;
+	})(_react.Component);
+
+	exports['default'] = Switch;
+
+	Switch.defaultProps = {
+	  state: false,
+	  label: '',
+	  labelOff: ''
+	};
+
+	Switch.propTypes = {
+	  'switch': _propTypes2['default'].func
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 81 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	var _reactFontawesome = __webpack_require__(78);
 
 	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
@@ -7786,7 +7876,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**

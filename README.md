@@ -2,9 +2,7 @@
 
 A set of common components for react applications
 
-## Usage
-
-Install
+## Install
 
 ```
 yarn add @salocreative/react-ui
@@ -37,9 +35,13 @@ Implement as follows
 
 Each of the grid components accepts a `customClasses` prop to add your own classes to each element. This is used like this `<Column customClasses='my-custom-card-class'></Column>`
 
-## Action button
+## Buttons
 
-A basic material design rounded action button
+A set of basic material design style buttons
+
+### Action button
+
+Rounded material desig action button
 
 ```
 import { ActionButton } from '@salocreative/react-ui';
@@ -71,6 +73,27 @@ There are also a couple of baked in modifier classes for the action button in th
 
 - `fixed` : this will fix the button in the bottom left corner of the screen and increase the diameter to 56px
 - `no-back` : removes the background colour of the button
+
+### Switch
+
+Action toggle switches (On/Off)
+
+```
+import { Switch } from '@salocreative/react-ui';
+```
+
+The switch takes it current state from the parent and then emits an event on toggle where we can run a function from the parent based on our use case.
+
+```
+<Switch
+    label='Online'
+    labelOff='Offline'
+    state={ this.state.switchToggle }
+    switch={ (e) => this.toggleSwitchUpdate(e) }
+/>
+```
+
+note the label on and off props. If no `labelOff` is provided the label will default to the standard `label` prop value.
 
 ## Fixed menu
 
