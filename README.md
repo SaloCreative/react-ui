@@ -122,6 +122,28 @@ implement as follows
 
 The only prop required for the fixed menu is `icon`. As per other components this only supports strings available within FontAwesome.
 
+## TypeAhead
+
+```
+import { TypeAhead } from '@salocreative/react-ui';
+```
+implement as follows
+
+```
+<TypeAhead
+    items={ productTags.data }
+    placeholder='Helper text'
+    selectedItem={ (id) => this.addTag(id) }
+/>
+```
+the typeahead takes the following props:
+
+- `items` : this needs to be array of objects with the basic structure that contains a title and id key. THe title is what will be rendered and the id is what will be on slection
+- `selectedItem` : this is the return function from the typeahead that is used by the application to process the selected item action
+- `placeholder` : string that sets the helper text for the component
+- `customClasses` : string of any custom classes you need
+- `data`: this is an object that can be used to assign what keys the typeahead will look for in the provided data for filtering and assignment. This need to contain an id and a title key.
+
 ## LICENSE
 
 MIT
