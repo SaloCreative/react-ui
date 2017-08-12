@@ -3,6 +3,7 @@
 import ActionButton from './components/buttons/actionButton';
 import Switch from './components/buttons/switch';
 
+import Tag from './components/filters/tag';
 import TypeAhead from './components/filters/typeahead';
 
 import Card from './components/grid/card';
@@ -15,6 +16,7 @@ export {
   ActionButton,
   Switch,
 
+  Tag,
   TypeAhead,
 
   Card,

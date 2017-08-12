@@ -93,28 +93,33 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _componentsButtonsSwitch2 = _interopRequireDefault(_componentsButtonsSwitch);
 
-	var _componentsFiltersTypeahead = __webpack_require__(78);
+	var _componentsFiltersTag = __webpack_require__(78);
+
+	var _componentsFiltersTag2 = _interopRequireDefault(_componentsFiltersTag);
+
+	var _componentsFiltersTypeahead = __webpack_require__(79);
 
 	var _componentsFiltersTypeahead2 = _interopRequireDefault(_componentsFiltersTypeahead);
 
-	var _componentsGridCard = __webpack_require__(79);
+	var _componentsGridCard = __webpack_require__(80);
 
 	var _componentsGridCard2 = _interopRequireDefault(_componentsGridCard);
 
-	var _componentsGridColumn = __webpack_require__(80);
+	var _componentsGridColumn = __webpack_require__(81);
 
 	var _componentsGridColumn2 = _interopRequireDefault(_componentsGridColumn);
 
-	var _componentsGridRow = __webpack_require__(81);
+	var _componentsGridRow = __webpack_require__(82);
 
 	var _componentsGridRow2 = _interopRequireDefault(_componentsGridRow);
 
-	var _componentsMenusFixedMenu = __webpack_require__(82);
+	var _componentsMenusFixedMenu = __webpack_require__(83);
 
 	var _componentsMenusFixedMenu2 = _interopRequireDefault(_componentsMenusFixedMenu);
 
 	exports.ActionButton = _componentsButtonsActionButton2['default'];
 	exports.Switch = _componentsButtonsSwitch2['default'];
+	exports.Tag = _componentsFiltersTag2['default'];
 	exports.TypeAhead = _componentsFiltersTypeahead2['default'];
 	exports.Card = _componentsGridCard2['default'];
 	exports.Column = _componentsGridColumn2['default'];
@@ -1082,7 +1087,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 /***/ },
 /* 8 */
-[83, 6],
+[84, 6],
 /* 9 */
 /***/ function(module, exports) {
 
@@ -3023,7 +3028,7 @@ return /******/ (function(modules) { // webpackBootstrap
 /* 22 */
 7,
 /* 23 */
-[83, 24],
+[84, 24],
 /* 24 */
 6,
 /* 25 */
@@ -7582,6 +7587,87 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _propTypes2 = _interopRequireDefault(_propTypes);
 
+	var _reactFontawesome = __webpack_require__(75);
+
+	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
+
+	var Tag = (function (_Component) {
+	  _inherits(Tag, _Component);
+
+	  function Tag() {
+	    _classCallCheck(this, Tag);
+
+	    _get(Object.getPrototypeOf(Tag.prototype), 'constructor', this).apply(this, arguments);
+	  }
+
+	  _createClass(Tag, [{
+	    key: 'deleteTag',
+	    value: function deleteTag(id) {
+	      if (this.props.removeTag) {
+	        this.props.removeTag(id);
+	      }
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      var _this = this;
+
+	      return _react2['default'].createElement(
+	        'span',
+	        { className: 'tag-item ' + this.props.customClasses },
+	        this.props.title,
+	        _react2['default'].createElement(
+	          'a',
+	          { className: 'tag-item--delete', onClick: function () {
+	              return _this.deleteTag(_this.props.id);
+	            } },
+	          _react2['default'].createElement(_reactFontawesome2['default'], { name: 'times' })
+	        )
+	      );
+	    }
+	  }]);
+
+	  return Tag;
+	})(_react.Component);
+
+	exports['default'] = Tag;
+
+	Tag.propTypes = {
+	  title: _propTypes2['default'].string.isRequired,
+	  id: _propTypes2['default'].number.isRequired,
+	  removeTag: _propTypes2['default'].func,
+	  customClasses: _propTypes2['default'].string
+	};
+	module.exports = exports['default'];
+
+/***/ },
+/* 79 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; desc = parent = undefined; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _propTypes = __webpack_require__(3);
+
+	var _propTypes2 = _interopRequireDefault(_propTypes);
+
 	var TypeAhead = (function (_Component) {
 	  _inherits(TypeAhead, _Component);
 
@@ -7705,7 +7791,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 79 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7771,7 +7857,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 80 */
+/* 81 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7837,7 +7923,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 81 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7903,7 +7989,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 82 */
+/* 83 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -7934,7 +8020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	var _reactFontawesome2 = _interopRequireDefault(_reactFontawesome);
 
-	var _gridCard = __webpack_require__(79);
+	var _gridCard = __webpack_require__(80);
 
 	var _gridCard2 = _interopRequireDefault(_gridCard);
 
@@ -8031,7 +8117,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = exports['default'];
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports, __webpack_require__, __webpack_module_template_argument_0__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/**

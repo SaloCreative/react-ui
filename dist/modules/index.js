@@ -12,6 +12,10 @@ var _componentsButtonsSwitch = require('./components/buttons/switch');
 
 var _componentsButtonsSwitch2 = _interopRequireDefault(_componentsButtonsSwitch);
 
+var _componentsFiltersTag = require('./components/filters/tag');
+
+var _componentsFiltersTag2 = _interopRequireDefault(_componentsFiltersTag);
+
 var _componentsFiltersTypeahead = require('./components/filters/typeahead');
 
 var _componentsFiltersTypeahead2 = _interopRequireDefault(_componentsFiltersTypeahead);
@@ -34,6 +38,7 @@ var _componentsMenusFixedMenu2 = _interopRequireDefault(_componentsMenusFixedMen
 
 exports.ActionButton = _componentsButtonsActionButton2['default'];
 exports.Switch = _componentsButtonsSwitch2['default'];
+exports.Tag = _componentsFiltersTag2['default'];
 exports.TypeAhead = _componentsFiltersTypeahead2['default'];
 exports.Card = _componentsGridCard2['default'];
 exports.Column = _componentsGridColumn2['default'];

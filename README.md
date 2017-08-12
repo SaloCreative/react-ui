@@ -144,6 +144,27 @@ the typeahead takes the following props:
 - `customClasses` : string of any custom classes you need
 - `data`: this is an object that can be used to assign what keys the typeahead will look for in the provided data for filtering and assignment. This need to contain an id and a title key.
 
+
+## Tag
+
+A custom component to display tags of authors, tags, categories etc.
+
+```
+<Tag
+    customClasses='custom-tag-class'
+    title={ tag.title }
+    id={ tag.id }
+    removeTag={ (id) => this.removeTag(id) }
+/>
+```
+
+The tag accepts the following props:
+
+- `customClasses` : Optional string to add your own classes
+- `id` : required number field to uniquely identify a tag
+- `title` : required string for the tag display text
+- `removeTag` : optional function that can be used to remove a given tag (don't supply to make read only)
+
 ## LICENSE
 
 MIT
