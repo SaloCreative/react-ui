@@ -44,6 +44,7 @@ var ActionButton = (function (_Component) {
     var link = _props.link;
     var type = _props.type;
     var icon = _props.icon;
+    var customClasses = _props.customClasses;
 
     switch (type) {
       case 'button':

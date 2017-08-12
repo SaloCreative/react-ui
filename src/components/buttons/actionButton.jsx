@@ -12,7 +12,7 @@ export default class ActionButton extends Component {
   }
 
   render() {
-    const { link, type, icon } = this.props;
+    const { link, type, icon, customClasses } = this.props;
     switch (type) {
       case 'button' :
         return (
