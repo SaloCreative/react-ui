@@ -12,6 +12,8 @@ import Row from './components/grid/row';
 
 import FixedMenu from './components/menus/fixedMenu';
 
+import Modal from './components/modals/modal';
+
 export {
   ActionButton,
   Switch,
@@ -23,5 +25,7 @@ export {
   Column,
   Row,
 
-  FixedMenu
+  FixedMenu,
+
+  Modal
 };

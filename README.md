@@ -146,8 +146,11 @@ the typeahead takes the following props:
 
 
 ## Tag
-
 A custom component to display tags of authors, tags, categories etc.
+
+```
+import { Tag } from '@salocreative/react-ui';
+```
 
 ```
 <Tag
@@ -164,6 +167,42 @@ The tag accepts the following props:
 - `id` : required number field to uniquely identify a tag
 - `title` : required string for the tag display text
 - `removeTag` : optional function that can be used to remove a given tag (don't supply to make read only)
+
+## Modal
+```
+import { Modal } from '@salocreative/react-ui';
+```
+implement as follows
+
+```
+<Modal
+  isOpen={ this.props.open }
+  onClose={ () => this.closeModal() }
+  customClasses='large'
+  title='Modal title'
+  footer='Modal footer content' >
+
+  My modal content goes here
+
+</Modal>
+```
+
+The Modal is display is controlled from the parent component so the state to hide or show the modal needs tp be explicitly set. With this in mind the Modal needs/accepts the following props:
+
+- `isOpen` : boolean value of whether the modal should display or not.
+- `onClose` : this is a function that will be called when the modal fires a close event.
+- `title` : string to set the modals title
+- `subtitle` : string to set the modals sub-title
+- `footer` : accepts JSX to set the content of the modal footer
+- `customClasses`: set custom classes on the modal
+
+**Modal size** currently there are some default sizes configured for the modal window. These can be set by passing the correct class via the `customClasses` prop (yuou can create your own of course)
+
+
+- `small` - 500px
+- default (no class needed) - 900px
+- `large` - 1400px
+- `x-large` - 100% width
 
 ## LICENSE
 

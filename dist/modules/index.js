@@ -36,6 +36,10 @@ var _componentsMenusFixedMenu = require('./components/menus/fixedMenu');
 
 var _componentsMenusFixedMenu2 = _interopRequireDefault(_componentsMenusFixedMenu);
 
+var _componentsModalsModal = require('./components/modals/modal');
+
+var _componentsModalsModal2 = _interopRequireDefault(_componentsModalsModal);
+
 exports.ActionButton = _componentsButtonsActionButton2['default'];
 exports.Switch = _componentsButtonsSwitch2['default'];
 exports.Tag = _componentsFiltersTag2['default'];
@@ -44,3 +48,4 @@ exports.Card = _componentsGridCard2['default'];
 exports.Column = _componentsGridColumn2['default'];
 exports.Row = _componentsGridRow2['default'];
 exports.FixedMenu = _componentsMenusFixedMenu2['default'];
+exports.Modal = _componentsModalsModal2['default'];
