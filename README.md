@@ -204,6 +204,22 @@ The Modal is display is controlled from the parent component so the state to hid
 - `large` - 1400px
 - `x-large` - 100% width
 
+## Loader
+```
+import { Loader } from '@salocreative/react-ui';
+```
+implement as follows
+
+```
+<Loader display={ this.props.loading } />
+```
+
+The Loader display is controlled from the parent component so the state to hide or show the loader needs tp be explicitly set. With this in mind the Loader needs/accepts the following props:
+
+- `display` : boolean value of whether the modal should display or not (default is hidden).
+- `style` : currently the default style is a spinner but a string of `inline` can be passed to get a 3 dot inline loader instead
+
+
 ## LICENSE
 
 MIT

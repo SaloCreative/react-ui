@@ -12,6 +12,8 @@ import Row from './components/grid/row';
 
 import FixedMenu from './components/menus/fixedMenu';
 
+import Loader from './components/misc/loader';
+
 import Modal from './components/modals/modal';
 
 export {
@@ -26,6 +28,8 @@ export {
   Row,
 
   FixedMenu,
+
+  Loader,
 
   Modal
 };
