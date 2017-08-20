@@ -71,7 +71,8 @@ TypeAhead.defaultProps = {
   data: {
     id: 'id',
     title: 'title'
-  }
+  },
+  customClasses: ''
 };
 
 TypeAhead.propTypes = {
