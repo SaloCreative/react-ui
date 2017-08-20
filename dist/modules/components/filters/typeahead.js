@@ -91,7 +91,7 @@ var TypeAhead = (function (_Component) {
 
     return _react2['default'].createElement(
       'div',
-      { className: 'form-group ' + this.props.customClasses },
+      { className: 'form-group form-typeahead ' + this.props.customClasses },
       _react2['default'].createElement('input', {
         className: 'form-field ' + (this.state.filterString ? 'has-value' : ''),
         value: this.state.filterString,
@@ -119,7 +119,8 @@ TypeAhead.defaultProps = {
   data: {
     id: 'id',
     title: 'title'
-  }
+  },
+  customClasses: ''
 };
 
 TypeAhead.propTypes = {

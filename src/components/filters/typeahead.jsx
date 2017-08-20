@@ -52,7 +52,7 @@ export default class TypeAhead extends Component {
 
   render() {
     return (
-      <div className={ `form-group ${ this.props.customClasses }` }>
+      <div className={ `form-group form-typeahead ${ this.props.customClasses }` }>
         <input
           className={ `form-field ${ this.state.filterString ? 'has-value' : '' }` }
           value={ this.state.filterString }

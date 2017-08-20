@@ -7759,7 +7759,7 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	      return _react2['default'].createElement(
 	        'div',
-	        { className: 'form-group ' + this.props.customClasses },
+	        { className: 'form-group form-typeahead ' + this.props.customClasses },
 	        _react2['default'].createElement('input', {
 	          className: 'form-field ' + (this.state.filterString ? 'has-value' : ''),
 	          value: this.state.filterString,
@@ -7788,7 +7788,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	  data: {
 	    id: 'id',
 	    title: 'title'
-	  }
+	  },
+	  customClasses: ''
 	};
 
 	TypeAhead.propTypes = {
