@@ -1,6 +1,6 @@
 {
   "name": "@salocreative/react-ui",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "description": "Simple set of React UI components.",
   "main": "./dist/modules/index.js",
   "scripts": {
